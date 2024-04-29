@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Interest Calculator</h1>
+        <div class="input-group">
+            <label for="principal">Principal Amount:</label>
+            <input type="number" id="principal" step="0.01" required>
+        </div>
+        <div class="input-group">
+            <label for="rate">Interest Rate (% per year):</label>
+            <input type="number" id="rate" step="0.01" required>
+        </div>
+        <div class="input-group">
+            <label for="time">Time Period(in years):</label>
+            <input type="number" id="time" step="0.01" required>
+        </div>
+        <button onclick="calculateSimpleInterest()">Calculate</button>
+        <div id="result"></div>
+    </div>
+    
+	<script src="{{ url_for('static', filename='/script.js') }}"></script>
+
+</body>
+</html>
